@@ -1,0 +1,11 @@
+auth_method,count,pct
+unclear,44,41.9
+OAuth 2.0,27,25.7
+API key / bearer token,23,21.9
+Documented auth flow,4,3.8
+No hosted app auth / CLI or open-source usage,2,1.9
+JWT bearer flow,1,1.0
+Private app access token,1,1.0
+Bot token,1,1.0
+GitHub App auth,1,1.0
+personal access token,1,1.0
