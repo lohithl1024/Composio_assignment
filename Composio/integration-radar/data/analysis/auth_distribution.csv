@@ -1,0 +1,7 @@
+primary_auth,count,pct
+unclear,44,44.0
+OAuth 2.0,27,27.0
+API key / bearer token,22,22.0
+Documented auth flow,4,4.0
+No hosted app auth / CLI or open-source usage,2,2.0
+Bot token,1,1.0
