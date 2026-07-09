@@ -1,0 +1,33 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/integration-radar/web/index.html"
+    },
+    {
+      "source": "/composio-analyzer",
+      "destination": "/integration-radar/web/composio-analyzer/index.html"
+    },
+    {
+      "source": "/composio-analyzer/",
+      "destination": "/integration-radar/web/composio-analyzer/index.html"
+    },
+    {
+      "source": "/composio-analyzer/dataset",
+      "destination": "/integration-radar/web/composio-analyzer/dataset/index.html"
+    },
+    {
+      "source": "/composio-analyzer/dataset/",
+      "destination": "/integration-radar/web/composio-analyzer/dataset/index.html"
+    },
+    {
+      "source": "/composio-analyzer/workflow",
+      "destination": "/integration-radar/web/composio-analyzer/workflow/index.html"
+    },
+    {
+      "source": "/composio-analyzer/workflow/",
+      "destination": "/integration-radar/web/composio-analyzer/workflow/index.html"
+    }
+  ]
+}

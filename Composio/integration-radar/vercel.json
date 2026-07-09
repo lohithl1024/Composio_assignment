@@ -1,0 +1,33 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/web/index.html"
+    },
+    {
+      "source": "/composio-analyzer",
+      "destination": "/web/composio-analyzer/index.html"
+    },
+    {
+      "source": "/composio-analyzer/",
+      "destination": "/web/composio-analyzer/index.html"
+    },
+    {
+      "source": "/composio-analyzer/dataset",
+      "destination": "/web/composio-analyzer/dataset/index.html"
+    },
+    {
+      "source": "/composio-analyzer/dataset/",
+      "destination": "/web/composio-analyzer/dataset/index.html"
+    },
+    {
+      "source": "/composio-analyzer/workflow",
+      "destination": "/web/composio-analyzer/workflow/index.html"
+    },
+    {
+      "source": "/composio-analyzer/workflow/",
+      "destination": "/web/composio-analyzer/workflow/index.html"
+    }
+  ]
+}
