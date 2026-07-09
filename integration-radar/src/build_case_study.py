@@ -33,10 +33,16 @@ def build_case_study(
     verification_json = json.dumps(load_json(verification_path))
 
     pages = [
+        ("home", "Composio Analyzer | Agentic Integration Research", Path("index.html"), ""),
+        ("dataset", "Dataset | Composio Analyzer", Path("dataset/index.html"), "../"),
+        ("workflow", "Workflow | Composio Analyzer", Path("workflow/index.html"), "../"),
         ("home", "Composio Analyzer | Agentic Integration Research", Path("web/composio-analyzer/index.html"), ""),
         ("dataset", "Dataset | Composio Analyzer", Path("web/composio-analyzer/dataset/index.html"), "../"),
         ("workflow", "Workflow | Composio Analyzer", Path("web/composio-analyzer/workflow/index.html"), "../"),
         ("home", "Composio Analyzer | Agentic Integration Research", output_path, "composio-analyzer/"),
+        ("home", "Composio Analyzer | Agentic Integration Research", Path("../index.html"), ""),
+        ("dataset", "Dataset | Composio Analyzer", Path("../dataset/index.html"), "../"),
+        ("workflow", "Workflow | Composio Analyzer", Path("../workflow/index.html"), "../"),
     ]
 
     for page, title, path, base_path in pages:
@@ -52,7 +58,7 @@ def build_case_study(
         path.write_text(html, encoding="utf-8")
 
     Path("web/index.html").write_text(
-        """<!doctype html><html><head><meta charset=\"utf-8\"><meta http-equiv=\"refresh\" content=\"0; url=./composio-analyzer/\"><title>Composio Analyzer</title></head><body><a href=\"./composio-analyzer/\">Open Composio Analyzer</a></body></html>""",
+        """<!doctype html><html><head><meta charset=\"utf-8\"><meta http-equiv=\"refresh\" content=\"0; url=./composio-analyzer/index.html\"><title>Composio Analyzer</title></head><body><a href=\"./composio-analyzer/index.html\">Open Composio Analyzer</a></body></html>""",
         encoding="utf-8",
     )
 

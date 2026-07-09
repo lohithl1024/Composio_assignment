@@ -1,0 +1,35 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/composio-analyzer",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/composio-analyzer/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/composio-analyzer/dataset",
+      "destination": "/dataset/index.html"
+    },
+    {
+      "source": "/composio-analyzer/dataset/",
+      "destination": "/dataset/index.html"
+    },
+    {
+      "source": "/composio-analyzer/workflow",
+      "destination": "/workflow/index.html"
+    },
+    {
+      "source": "/composio-analyzer/workflow/",
+      "destination": "/workflow/index.html"
+    }
+  ]
+}
