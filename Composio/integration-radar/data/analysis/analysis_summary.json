@@ -1,0 +1,2391 @@
+{
+  "dataset_summary": {
+    "total_apps": 100,
+    "with_evidence": 99,
+    "low_confidence_rows": 14,
+    "sampled_for_verification": 20,
+    "human_review_required": 14,
+    "with_mcp_evidence": 2,
+    "with_public_api": 86
+  },
+  "buildability_distribution": {
+    "buildable_now": {
+      "count": 60,
+      "pct": 60.0
+    },
+    "buildable_with_caveats": {
+      "count": 20,
+      "pct": 20.0
+    },
+    "unclear_needs_review": {
+      "count": 12,
+      "pct": 12.0
+    },
+    "possible_but_gated": {
+      "count": 8,
+      "pct": 8.0
+    }
+  },
+  "access_model_distribution": {
+    "self_serve_free_or_trial": {
+      "count": 62,
+      "pct": 62.0
+    },
+    "admin_or_workspace_dependent": {
+      "count": 14,
+      "pct": 14.0
+    },
+    "self_serve_paid_plan_required": {
+      "count": 8,
+      "pct": 8.0
+    },
+    "unclear": {
+      "count": 8,
+      "pct": 8.0
+    },
+    "partner_or_contact_sales_gated": {
+      "count": 8,
+      "pct": 8.0
+    }
+  },
+  "primary_auth_distribution": {
+    "unclear": {
+      "count": 44,
+      "pct": 44.0
+    },
+    "OAuth 2.0": {
+      "count": 27,
+      "pct": 27.0
+    },
+    "API key / bearer token": {
+      "count": 22,
+      "pct": 22.0
+    },
+    "Documented auth flow": {
+      "count": 4,
+      "pct": 4.0
+    },
+    "No hosted app auth / CLI or open-source usage": {
+      "count": 2,
+      "pct": 2.0
+    },
+    "Bot token": {
+      "count": 1,
+      "pct": 1.0
+    }
+  },
+  "all_auth_distribution": {
+    "unclear": {
+      "count": 44,
+      "pct": 41.9
+    },
+    "OAuth 2.0": {
+      "count": 27,
+      "pct": 25.7
+    },
+    "API key / bearer token": {
+      "count": 23,
+      "pct": 21.9
+    },
+    "Documented auth flow": {
+      "count": 4,
+      "pct": 3.8
+    },
+    "No hosted app auth / CLI or open-source usage": {
+      "count": 2,
+      "pct": 1.9
+    },
+    "JWT bearer flow": {
+      "count": 1,
+      "pct": 1.0
+    },
+    "Private app access token": {
+      "count": 1,
+      "pct": 1.0
+    },
+    "Bot token": {
+      "count": 1,
+      "pct": 1.0
+    },
+    "GitHub App auth": {
+      "count": 1,
+      "pct": 1.0
+    },
+    "personal access token": {
+      "count": 1,
+      "pct": 1.0
+    }
+  },
+  "blocker_counts": {
+    "none": {
+      "count": 60,
+      "pct": 60.0
+    },
+    "admin_setup_required": {
+      "count": 14,
+      "pct": 14.0
+    },
+    "unclear_access": {
+      "count": 12,
+      "pct": 12.0
+    },
+    "app_review_or_business_verification": {
+      "count": 8,
+      "pct": 8.0
+    },
+    "paid_plan_required": {
+      "count": 6,
+      "pct": 6.0
+    }
+  },
+  "confidence_distribution": {
+    "medium": {
+      "count": 81,
+      "pct": 81.0
+    },
+    "low": {
+      "count": 14,
+      "pct": 14.0
+    },
+    "high": {
+      "count": 5,
+      "pct": 5.0
+    }
+  },
+  "mcp_distribution": {
+    "none_found": {
+      "count": 86,
+      "pct": 86.0
+    },
+    "unclear": {
+      "count": 12,
+      "pct": 12.0
+    },
+    "official": {
+      "count": 2,
+      "pct": 2.0
+    }
+  },
+  "category_breakdown": [
+    {
+      "category": "AI, Research and Media-native",
+      "total_apps": 10,
+      "buildable_now_count": 3,
+      "buildable_now_pct": 30.0,
+      "self_serve_count": 4,
+      "self_serve_pct": 40.0,
+      "most_common_auth": "unclear",
+      "most_common_blocker": "unclear_access",
+      "high_confidence": 0,
+      "medium_confidence": 4,
+      "low_confidence": 6
+    },
+    {
+      "category": "CRM and Sales",
+      "total_apps": 10,
+      "buildable_now_count": 6,
+      "buildable_now_pct": 60.0,
+      "self_serve_count": 7,
+      "self_serve_pct": 70.0,
+      "most_common_auth": "OAuth 2.0",
+      "most_common_blocker": "none",
+      "high_confidence": 0,
+      "medium_confidence": 10,
+      "low_confidence": 0
+    },
+    {
+      "category": "Communications and Messaging",
+      "total_apps": 10,
+      "buildable_now_count": 8,
+      "buildable_now_pct": 80.0,
+      "self_serve_count": 8,
+      "self_serve_pct": 80.0,
+      "most_common_auth": "unclear",
+      "most_common_blocker": "none",
+      "high_confidence": 1,
+      "medium_confidence": 8,
+      "low_confidence": 1
+    },
+    {
+      "category": "Data, SEO and Scraping",
+      "total_apps": 10,
+      "buildable_now_count": 4,
+      "buildable_now_pct": 40.0,
+      "self_serve_count": 10,
+      "self_serve_pct": 100.0,
+      "most_common_auth": "API key / bearer token",
+      "most_common_blocker": "none",
+      "high_confidence": 0,
+      "medium_confidence": 7,
+      "low_confidence": 3
+    },
+    {
+      "category": "Developer, Infra and Data platforms",
+      "total_apps": 10,
+      "buildable_now_count": 8,
+      "buildable_now_pct": 80.0,
+      "self_serve_count": 8,
+      "self_serve_pct": 80.0,
+      "most_common_auth": "unclear",
+      "most_common_blocker": "none",
+      "high_confidence": 1,
+      "medium_confidence": 9,
+      "low_confidence": 0
+    },
+    {
+      "category": "Ecommerce",
+      "total_apps": 10,
+      "buildable_now_count": 5,
+      "buildable_now_pct": 50.0,
+      "self_serve_count": 5,
+      "self_serve_pct": 50.0,
+      "most_common_auth": "unclear",
+      "most_common_blocker": "none",
+      "high_confidence": 1,
+      "medium_confidence": 8,
+      "low_confidence": 1
+    },
+    {
+      "category": "Finance and Fintech",
+      "total_apps": 10,
+      "buildable_now_count": 4,
+      "buildable_now_pct": 40.0,
+      "self_serve_count": 6,
+      "self_serve_pct": 60.0,
+      "most_common_auth": "unclear",
+      "most_common_blocker": "none",
+      "high_confidence": 0,
+      "medium_confidence": 8,
+      "low_confidence": 2
+    },
+    {
+      "category": "Marketing, Ads, Email and Social",
+      "total_apps": 10,
+      "buildable_now_count": 6,
+      "buildable_now_pct": 60.0,
+      "self_serve_count": 6,
+      "self_serve_pct": 60.0,
+      "most_common_auth": "OAuth 2.0",
+      "most_common_blocker": "none",
+      "high_confidence": 1,
+      "medium_confidence": 8,
+      "low_confidence": 1
+    },
+    {
+      "category": "Productivity and Project Management",
+      "total_apps": 10,
+      "buildable_now_count": 7,
+      "buildable_now_pct": 70.0,
+      "self_serve_count": 7,
+      "self_serve_pct": 70.0,
+      "most_common_auth": "OAuth 2.0",
+      "most_common_blocker": "none",
+      "high_confidence": 0,
+      "medium_confidence": 10,
+      "low_confidence": 0
+    },
+    {
+      "category": "Support and Helpdesk",
+      "total_apps": 10,
+      "buildable_now_count": 9,
+      "buildable_now_pct": 90.0,
+      "self_serve_count": 9,
+      "self_serve_pct": 90.0,
+      "most_common_auth": "unclear",
+      "most_common_blocker": "none",
+      "high_confidence": 1,
+      "medium_confidence": 9,
+      "low_confidence": 0
+    }
+  ],
+  "easy_wins": [
+    {
+      "rank": 1,
+      "app_name": "Intercom",
+      "category": "Support and Helpdesk",
+      "score": 11,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 2,
+      "app_name": "Magento (Adobe Commerce)",
+      "category": "Ecommerce",
+      "score": 11,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "platform_level",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 3,
+      "app_name": "GitHub",
+      "category": "Developer, Infra and Data platforms",
+      "score": 11,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "platform_level",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "high",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 4,
+      "app_name": "Vercel",
+      "category": "Developer, Infra and Data platforms",
+      "score": 11,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 5,
+      "app_name": "Netlify",
+      "category": "Developer, Infra and Data platforms",
+      "score": 11,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 6,
+      "app_name": "Cloudflare",
+      "category": "Developer, Infra and Data platforms",
+      "score": 11,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "platform_level",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 7,
+      "app_name": "Datadog",
+      "category": "Developer, Infra and Data platforms",
+      "score": 11,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 8,
+      "app_name": "Notion",
+      "category": "Productivity and Project Management",
+      "score": 11,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 9,
+      "app_name": "Airtable",
+      "category": "Productivity and Project Management",
+      "score": 11,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 10,
+      "app_name": "Asana",
+      "category": "Productivity and Project Management",
+      "score": 11,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 11,
+      "app_name": "Pipedrive",
+      "category": "CRM and Sales",
+      "score": 10,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 12,
+      "app_name": "Attio",
+      "category": "CRM and Sales",
+      "score": 10,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 13,
+      "app_name": "Twenty",
+      "category": "CRM and Sales",
+      "score": 10,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 14,
+      "app_name": "Podio",
+      "category": "CRM and Sales",
+      "score": 10,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 15,
+      "app_name": "Close",
+      "category": "CRM and Sales",
+      "score": 10,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 16,
+      "app_name": "Copper",
+      "category": "CRM and Sales",
+      "score": 10,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 17,
+      "app_name": "Freshdesk",
+      "category": "Support and Helpdesk",
+      "score": 10,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 18,
+      "app_name": "Front",
+      "category": "Support and Helpdesk",
+      "score": 10,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 19,
+      "app_name": "Pylon",
+      "category": "Support and Helpdesk",
+      "score": 10,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    },
+    {
+      "rank": 20,
+      "app_name": "LiveAgent",
+      "category": "Support and Helpdesk",
+      "score": 10,
+      "access_model": "self_serve_free_or_trial",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_now",
+      "main_blocker": "none",
+      "confidence": "medium",
+      "reason": "Public docs, workable auth, and moderate-or-better API surface make this a first-pass build-now candidate."
+    }
+  ],
+  "outreach_needed": [
+    {
+      "rank": 1,
+      "app_name": "Salesforce",
+      "category": "CRM and Sales",
+      "score": 9,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "platform_level",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 2,
+      "app_name": "HubSpot",
+      "category": "CRM and Sales",
+      "score": 9,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "platform_level",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 3,
+      "app_name": "Zoho CRM",
+      "category": "CRM and Sales",
+      "score": 9,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "platform_level",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 4,
+      "app_name": "Zendesk",
+      "category": "Support and Helpdesk",
+      "score": 9,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "high",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 5,
+      "app_name": "Slack",
+      "category": "Communications and Messaging",
+      "score": 9,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "high",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 6,
+      "app_name": "Shopify",
+      "category": "Ecommerce",
+      "score": 9,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "platform_level",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "high",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 7,
+      "app_name": "BigCommerce",
+      "category": "Ecommerce",
+      "score": 9,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 8,
+      "app_name": "Jira",
+      "category": "Productivity and Project Management",
+      "score": 9,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "platform_level",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 9,
+      "app_name": "QuickBooks",
+      "category": "Finance and Fintech",
+      "score": 9,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 10,
+      "app_name": "Xero",
+      "category": "Finance and Fintech",
+      "score": 9,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "broad",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 11,
+      "app_name": "Google Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "score": 8,
+      "access_model": "partner_or_contact_sales_gated",
+      "api_breadth": "broad",
+      "buildability_verdict": "possible_but_gated",
+      "main_blocker": "app_review_or_business_verification",
+      "confidence": "high",
+      "reason": "API may be useful, but practical toolkit access likely depends on approval, verification, sales, or partnership."
+    },
+    {
+      "rank": 12,
+      "app_name": "Meta Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "score": 8,
+      "access_model": "partner_or_contact_sales_gated",
+      "api_breadth": "broad",
+      "buildability_verdict": "possible_but_gated",
+      "main_blocker": "app_review_or_business_verification",
+      "confidence": "medium",
+      "reason": "API may be useful, but practical toolkit access likely depends on approval, verification, sales, or partnership."
+    },
+    {
+      "rank": 13,
+      "app_name": "Amazon Selling Partner",
+      "category": "Ecommerce",
+      "score": 8,
+      "access_model": "partner_or_contact_sales_gated",
+      "api_breadth": "broad",
+      "buildability_verdict": "possible_but_gated",
+      "main_blocker": "app_review_or_business_verification",
+      "confidence": "medium",
+      "reason": "API may be useful, but practical toolkit access likely depends on approval, verification, sales, or partnership."
+    },
+    {
+      "rank": 14,
+      "app_name": "Snowflake",
+      "category": "Developer, Infra and Data platforms",
+      "score": 7,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 15,
+      "app_name": "MongoDB Atlas",
+      "category": "Developer, Infra and Data platforms",
+      "score": 7,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 16,
+      "app_name": "Monday.com",
+      "category": "Productivity and Project Management",
+      "score": 7,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 17,
+      "app_name": "Smartsheet",
+      "category": "Productivity and Project Management",
+      "score": 7,
+      "access_model": "admin_or_workspace_dependent",
+      "api_breadth": "moderate",
+      "buildability_verdict": "buildable_with_caveats",
+      "main_blocker": "admin_setup_required",
+      "confidence": "medium",
+      "reason": "Technically buildable, but installation and credential setup likely depend on an admin or workspace owner."
+    },
+    {
+      "rank": 18,
+      "app_name": "LinkedIn Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "score": 6,
+      "access_model": "partner_or_contact_sales_gated",
+      "api_breadth": "moderate",
+      "buildability_verdict": "possible_but_gated",
+      "main_blocker": "app_review_or_business_verification",
+      "confidence": "medium",
+      "reason": "API may be useful, but practical toolkit access likely depends on approval, verification, sales, or partnership."
+    },
+    {
+      "rank": 19,
+      "app_name": "Salesforce Commerce Cloud",
+      "category": "Ecommerce",
+      "score": 6,
+      "access_model": "partner_or_contact_sales_gated",
+      "api_breadth": "moderate",
+      "buildability_verdict": "possible_but_gated",
+      "main_blocker": "app_review_or_business_verification",
+      "confidence": "medium",
+      "reason": "API may be useful, but practical toolkit access likely depends on approval, verification, sales, or partnership."
+    },
+    {
+      "rank": 20,
+      "app_name": "NotebookLM",
+      "category": "AI, Research and Media-native",
+      "score": 6,
+      "access_model": "partner_or_contact_sales_gated",
+      "api_breadth": "moderate",
+      "buildability_verdict": "possible_but_gated",
+      "main_blocker": "app_review_or_business_verification",
+      "confidence": "medium",
+      "reason": "API may be useful, but practical toolkit access likely depends on approval, verification, sales, or partnership."
+    }
+  ],
+  "verification_summary": {
+    "sample_size": 20,
+    "sampling_strategy": "Included all low-confidence/human-review rows first, then added category-calibration rows.",
+    "sampled_app_ids": [
+      25,
+      37,
+      50,
+      58,
+      59,
+      60,
+      84,
+      90,
+      93,
+      94,
+      95,
+      97,
+      98,
+      100,
+      2,
+      11,
+      21,
+      31,
+      41,
+      61
+    ],
+    "first_pass_accuracy": 0.375,
+    "first_pass_correct_or_partial_rate": 0.517,
+    "post_verification_accuracy": 0.517,
+    "unresolved_after_verification_rate": 0.483,
+    "field_accuracy": {
+      "one_line_description": {
+        "correct": 19,
+        "partial": 1
+      },
+      "auth_methods": {
+        "needs_review": 12,
+        "partial": 3,
+        "correct": 5
+      },
+      "access.model": {
+        "needs_review": 8,
+        "partial": 5,
+        "correct": 7
+      },
+      "api_surface": {
+        "needs_review": 14,
+        "correct": 6
+      },
+      "mcp.status": {
+        "needs_review": 12,
+        "partial": 8
+      },
+      "buildability": {
+        "needs_review": 12,
+        "correct": 8
+      }
+    },
+    "row_outcomes": {
+      "flagged": 14,
+      "corrected": 1,
+      "partial": 5
+    },
+    "confidence_movement": {
+      "before": {
+        "medium": 8,
+        "low": 12
+      },
+      "after": {
+        "medium": 1,
+        "high": 5,
+        "low": 14
+      }
+    },
+    "most_common_error_modes": [
+      "mcp_absence_or_status_uncertain",
+      "auth_path_incomplete_or_unclear",
+      "api_surface_needs_review",
+      "access_model_needs_stronger_evidence",
+      "buildability_verdict_needs_review"
+    ],
+    "checks": [
+      {
+        "app_id": 25,
+        "app_name": "Pumble",
+        "category": "Communications and Messaging",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Pumble is a communications platform for messaging, calls, notifications, or collaboration workflows.",
+            "verified_value": "Pumble is a communications platform for messaging, calls, notifications, or collaboration workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Credential access model remains unclear.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 37,
+        "app_name": "systeme.io",
+        "category": "Marketing, Ads, Email and Social",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "systeme.io is a marketing, ads, email, or social platform for campaign and audience workflows.",
+            "verified_value": "systeme.io is a marketing, ads, email, or social platform for campaign and audience workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Credential access model remains unclear.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 50,
+        "app_name": "fanbasis",
+        "category": "Ecommerce",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "fanbasis is a ecommerce platform for stores, products, orders, customers, and commerce operations.",
+            "verified_value": "fanbasis is a ecommerce platform for stores, products, orders, customers, and commerce operations.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Credential access model remains unclear.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['Webhooks']",
+            "verified_value": "False; none_or_unclear; ['Webhooks']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 58,
+        "app_name": "Sherlock",
+        "category": "Data, SEO and Scraping",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Sherlock is a data, SEO, scraping, or enrichment platform for collecting and operationalizing web or business data.",
+            "verified_value": "Sherlock is a data, SEO, scraping, or enrichment platform for collecting and operationalizing web or business data.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "partial",
+            "extracted_value": "No hosted app auth / CLI or open-source usage",
+            "verified_value": "No hosted app auth / CLI or open-source usage",
+            "issue_found": "Auth method inferred without a dedicated auth docs URL.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "partial",
+            "extracted_value": "self_serve_free_or_trial",
+            "verified_value": "self_serve_free_or_trial",
+            "issue_found": "Access model inferred from docs presence rather than explicit access/pricing evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['REST']",
+            "verified_value": "False; none_or_unclear; ['REST']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "partial",
+            "extracted_value": "none_found",
+            "verified_value": "none_found",
+            "issue_found": "No MCP URL found in discovery; absence has not been exhaustively proven.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 59,
+        "app_name": "Waterfall.io",
+        "category": "Data, SEO and Scraping",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Waterfall.io is a data, SEO, scraping, or enrichment platform for collecting and operationalizing web or business data.",
+            "verified_value": "Waterfall.io is a data, SEO, scraping, or enrichment platform for collecting and operationalizing web or business data.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "partial",
+            "extracted_value": "self_serve_paid_plan_required",
+            "verified_value": "self_serve_paid_plan_required",
+            "issue_found": "Access model inferred from docs presence rather than explicit access/pricing evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 60,
+        "app_name": "Clay",
+        "category": "Data, SEO and Scraping",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Clay is a data, SEO, scraping, or enrichment platform for collecting and operationalizing web or business data.",
+            "verified_value": "Clay is a data, SEO, scraping, or enrichment platform for collecting and operationalizing web or business data.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "partial",
+            "extracted_value": "self_serve_paid_plan_required",
+            "verified_value": "self_serve_paid_plan_required",
+            "issue_found": "Access model inferred from docs presence rather than explicit access/pricing evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 84,
+        "app_name": "Paygent Connect",
+        "category": "Finance and Fintech",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "partial",
+            "extracted_value": "Paygent Connect is a finance or fintech platform for payments, accounting, banking, spend, or financial data workflows.",
+            "verified_value": "Paygent Connect is a finance or fintech platform for payments, accounting, banking, spend, or financial data workflows.",
+            "issue_found": "Description exists but evidence is weak or generic.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "correct",
+            "extracted_value": "partner_or_contact_sales_gated",
+            "verified_value": "partner_or_contact_sales_gated",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "correct",
+            "extracted_value": "possible_but_gated; app_review_or_business_verification",
+            "verified_value": "possible_but_gated; app_review_or_business_verification",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          }
+        ],
+        "first_pass_correct_count": 2,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 90,
+        "app_name": "PitchBook",
+        "category": "Finance and Fintech",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "PitchBook is a finance or fintech platform for payments, accounting, banking, spend, or financial data workflows.",
+            "verified_value": "PitchBook is a finance or fintech platform for payments, accounting, banking, spend, or financial data workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "correct",
+            "extracted_value": "partner_or_contact_sales_gated",
+            "verified_value": "partner_or_contact_sales_gated",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "correct",
+            "extracted_value": "possible_but_gated; app_review_or_business_verification",
+            "verified_value": "possible_but_gated; app_review_or_business_verification",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          }
+        ],
+        "first_pass_correct_count": 3,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 93,
+        "app_name": "Fathom",
+        "category": "AI, Research and Media-native",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Fathom is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "verified_value": "Fathom is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Credential access model remains unclear.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 94,
+        "app_name": "Consensus",
+        "category": "AI, Research and Media-native",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Consensus is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "verified_value": "Consensus is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Credential access model remains unclear.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 95,
+        "app_name": "Reducto",
+        "category": "AI, Research and Media-native",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Reducto is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "verified_value": "Reducto is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Credential access model remains unclear.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 97,
+        "app_name": "higgsfield",
+        "category": "AI, Research and Media-native",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "higgsfield is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "verified_value": "higgsfield is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Credential access model remains unclear.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 98,
+        "app_name": "Mermaid CLI",
+        "category": "AI, Research and Media-native",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Mermaid CLI is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "verified_value": "Mermaid CLI is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "partial",
+            "extracted_value": "No hosted app auth / CLI or open-source usage",
+            "verified_value": "No hosted app auth / CLI or open-source usage",
+            "issue_found": "Auth method inferred without a dedicated auth docs URL.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "partial",
+            "extracted_value": "self_serve_free_or_trial",
+            "verified_value": "self_serve_free_or_trial",
+            "issue_found": "Access model inferred from docs presence rather than explicit access/pricing evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['REST']",
+            "verified_value": "False; none_or_unclear; ['REST']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "partial",
+            "extracted_value": "none_found",
+            "verified_value": "none_found",
+            "issue_found": "No MCP URL found in discovery; absence has not been exhaustively proven.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 100,
+        "app_name": "Grain",
+        "category": "AI, Research and Media-native",
+        "sample_reason": [
+          "low_confidence",
+          "human_review_flag"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Grain is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "verified_value": "Grain is a AI, research, meeting, or media-native product for knowledge, content, or automation workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Auth method unresolved from discovered evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "Credential access model remains unclear.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "needs_review",
+            "extracted_value": "False; none_or_unclear; ['unknown']",
+            "verified_value": "False; none_or_unclear; ['unknown']",
+            "issue_found": "API surface unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear",
+            "verified_value": "unclear",
+            "issue_found": "MCP status unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "needs_review",
+            "extracted_value": "unclear_needs_review; unclear_access",
+            "verified_value": "unclear_needs_review; unclear_access",
+            "issue_found": "Buildability remains unresolved.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "needs_review"
+          }
+        ],
+        "first_pass_correct_count": 1,
+        "first_pass_checked_count": 6,
+        "final_status": "flagged",
+        "overall_row_verdict": "flagged",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 2,
+        "app_name": "HubSpot",
+        "category": "CRM and Sales",
+        "sample_reason": [
+          "category_calibration"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "HubSpot is a CRM and sales platform for managing customer records, deals, and revenue workflows.",
+            "verified_value": "HubSpot is a CRM and sales platform for managing customer records, deals, and revenue workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "partial",
+            "extracted_value": "OAuth 2.0",
+            "verified_value": "OAuth 2.0, Private app access token",
+            "issue_found": "OAuth was captured but private app token path was omitted.",
+            "correction_applied": "Added Private app access token.",
+            "changed": true,
+            "final_result": "corrected"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "correct",
+            "extracted_value": "admin_or_workspace_dependent",
+            "verified_value": "admin_or_workspace_dependent",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "correct",
+            "extracted_value": "True; platform_level; ['REST', 'Webhooks']",
+            "verified_value": "True; platform_level; ['REST', 'Webhooks']",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "partial",
+            "extracted_value": "none_found",
+            "verified_value": "none_found",
+            "issue_found": "No MCP URL found in discovery; absence has not been exhaustively proven.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "correct",
+            "extracted_value": "buildable_with_caveats; admin_setup_required",
+            "verified_value": "buildable_with_caveats; admin_setup_required",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          }
+        ],
+        "first_pass_correct_count": 4,
+        "first_pass_checked_count": 6,
+        "final_status": "corrected",
+        "overall_row_verdict": "corrected",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 11,
+        "app_name": "Zendesk",
+        "category": "Support and Helpdesk",
+        "sample_reason": [
+          "category_calibration"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Zendesk is a customer support platform for managing conversations, tickets, and service workflows.",
+            "verified_value": "Zendesk is a customer support platform for managing conversations, tickets, and service workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "correct",
+            "extracted_value": "OAuth 2.0",
+            "verified_value": "OAuth 2.0",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "correct",
+            "extracted_value": "admin_or_workspace_dependent",
+            "verified_value": "admin_or_workspace_dependent",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "correct",
+            "extracted_value": "True; broad; ['REST', 'Webhooks']",
+            "verified_value": "True; broad; ['REST', 'Webhooks']",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "partial",
+            "extracted_value": "none_found",
+            "verified_value": "none_found",
+            "issue_found": "No MCP URL found in discovery; absence has not been exhaustively proven.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "correct",
+            "extracted_value": "buildable_with_caveats; admin_setup_required",
+            "verified_value": "buildable_with_caveats; admin_setup_required",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          }
+        ],
+        "first_pass_correct_count": 5,
+        "first_pass_checked_count": 6,
+        "final_status": "pass",
+        "overall_row_verdict": "partial",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 21,
+        "app_name": "Slack",
+        "category": "Communications and Messaging",
+        "sample_reason": [
+          "category_calibration"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Slack is a communications platform for messaging, calls, notifications, or collaboration workflows.",
+            "verified_value": "Slack is a communications platform for messaging, calls, notifications, or collaboration workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "correct",
+            "extracted_value": "OAuth 2.0",
+            "verified_value": "OAuth 2.0",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "correct",
+            "extracted_value": "admin_or_workspace_dependent",
+            "verified_value": "admin_or_workspace_dependent",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "correct",
+            "extracted_value": "True; broad; ['REST']",
+            "verified_value": "True; broad; ['REST']",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "partial",
+            "extracted_value": "none_found",
+            "verified_value": "none_found",
+            "issue_found": "No MCP URL found in discovery; absence has not been exhaustively proven.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "correct",
+            "extracted_value": "buildable_with_caveats; admin_setup_required",
+            "verified_value": "buildable_with_caveats; admin_setup_required",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          }
+        ],
+        "first_pass_correct_count": 5,
+        "first_pass_checked_count": 6,
+        "final_status": "pass",
+        "overall_row_verdict": "partial",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 31,
+        "app_name": "Google Ads",
+        "category": "Marketing, Ads, Email and Social",
+        "sample_reason": [
+          "category_calibration"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Google Ads is a marketing, ads, email, or social platform for campaign and audience workflows.",
+            "verified_value": "Google Ads is a marketing, ads, email, or social platform for campaign and audience workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "correct",
+            "extracted_value": "OAuth 2.0",
+            "verified_value": "OAuth 2.0",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "correct",
+            "extracted_value": "partner_or_contact_sales_gated",
+            "verified_value": "partner_or_contact_sales_gated",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "correct",
+            "extracted_value": "True; broad; ['REST']",
+            "verified_value": "True; broad; ['REST']",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "partial",
+            "extracted_value": "none_found",
+            "verified_value": "none_found",
+            "issue_found": "No MCP URL found in discovery; absence has not been exhaustively proven.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "correct",
+            "extracted_value": "possible_but_gated; app_review_or_business_verification",
+            "verified_value": "possible_but_gated; app_review_or_business_verification",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          }
+        ],
+        "first_pass_correct_count": 5,
+        "first_pass_checked_count": 6,
+        "final_status": "pass",
+        "overall_row_verdict": "partial",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 41,
+        "app_name": "Shopify",
+        "category": "Ecommerce",
+        "sample_reason": [
+          "category_calibration"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "Shopify is a ecommerce platform for stores, products, orders, customers, and commerce operations.",
+            "verified_value": "Shopify is a ecommerce platform for stores, products, orders, customers, and commerce operations.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "correct",
+            "extracted_value": "OAuth 2.0",
+            "verified_value": "OAuth 2.0",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "correct",
+            "extracted_value": "admin_or_workspace_dependent",
+            "verified_value": "admin_or_workspace_dependent",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "correct",
+            "extracted_value": "True; platform_level; ['REST', 'GraphQL', 'Webhooks']",
+            "verified_value": "True; platform_level; ['REST', 'GraphQL', 'Webhooks']",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "partial",
+            "extracted_value": "none_found",
+            "verified_value": "none_found",
+            "issue_found": "No MCP URL found in discovery; absence has not been exhaustively proven.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "correct",
+            "extracted_value": "buildable_with_caveats; admin_setup_required",
+            "verified_value": "buildable_with_caveats; admin_setup_required",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          }
+        ],
+        "first_pass_correct_count": 5,
+        "first_pass_checked_count": 6,
+        "final_status": "pass",
+        "overall_row_verdict": "partial",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      },
+      {
+        "app_id": 61,
+        "app_name": "GitHub",
+        "category": "Developer, Infra and Data platforms",
+        "sample_reason": [
+          "category_calibration"
+        ],
+        "fields_checked": [
+          {
+            "field": "one_line_description",
+            "initial_result": "correct",
+            "extracted_value": "GitHub is a developer, infrastructure, or data platform for engineering and operational workflows.",
+            "verified_value": "GitHub is a developer, infrastructure, or data platform for engineering and operational workflows.",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "auth_methods",
+            "initial_result": "correct",
+            "extracted_value": "OAuth 2.0, GitHub App auth, personal access token",
+            "verified_value": "OAuth 2.0, GitHub App auth, personal access token",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "access.model",
+            "initial_result": "partial",
+            "extracted_value": "self_serve_free_or_trial",
+            "verified_value": "self_serve_free_or_trial",
+            "issue_found": "Access model inferred from docs presence rather than explicit access/pricing evidence.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "api_surface",
+            "initial_result": "correct",
+            "extracted_value": "True; platform_level; ['REST', 'GraphQL', 'Webhooks']",
+            "verified_value": "True; platform_level; ['REST', 'GraphQL', 'Webhooks']",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "mcp.status",
+            "initial_result": "partial",
+            "extracted_value": "none_found",
+            "verified_value": "none_found",
+            "issue_found": "No MCP URL found in discovery; absence has not been exhaustively proven.",
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          },
+          {
+            "field": "buildability",
+            "initial_result": "correct",
+            "extracted_value": "buildable_now; none",
+            "verified_value": "buildable_now; none",
+            "issue_found": null,
+            "correction_applied": null,
+            "changed": false,
+            "final_result": "verified"
+          }
+        ],
+        "first_pass_correct_count": 4,
+        "first_pass_checked_count": 6,
+        "final_status": "pass",
+        "overall_row_verdict": "partial",
+        "notes": "Field-level automated verification scaffold; use as audit trail for final human review."
+      }
+    ]
+  },
+  "headline_findings": [
+    "60.0% of the set is classified as buildable-now in the current verified dataset.",
+    "The most common access model is self_serve_free_or_trial, showing that credential accessibility is a central product-ops filter.",
+    "The most common known primary auth path is OAuth 2.0, while unresolved auth rows stay visible for targeted review.",
+    "The most common non-trivial blocker is admin_setup_required, reinforcing that integration readiness is often limited by access/setup friction rather than API existence alone.",
+    "Support and Helpdesk has the highest buildable-now share in this pass at 90.0%.",
+    "The sampled verification audit measured 37.5% strict field accuracy and 51.7% correct-or-partial coverage.",
+    "Rows that remain low-confidence or flagged are preserved as review work rather than silently promoted into the final table."
+  ]
+}
