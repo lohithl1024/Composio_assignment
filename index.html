@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Composio Analyzer </title>
+    <title>Composio Analyzer | Agentic Integration Research</title>
     <style>
       :root {
         --bg: #ffffff;
@@ -252,8 +252,8 @@
 
       .agent-card {
         position: relative;
-        flex: 0 0 min(460px, 76vw);
-        min-height: 238px;
+        flex: 0 0 min(560px, 82vw);
+        min-height: 520px;
         padding: 28px;
         border: 1px solid var(--line);
         border-radius: 34px 34px 34px 10px;
@@ -302,7 +302,60 @@
         color: var(--muted);
         font-size: 15px;
         line-height: 1.55;
-        margin-bottom: 18px;
+        margin-bottom: 0;
+      }
+
+      .agent-role {
+        margin: 14px 0 20px;
+        color: var(--ink) !important;
+      }
+
+      .agent-rows {
+        display: grid;
+        gap: 14px;
+      }
+
+      .agent-row {
+        display: grid;
+        grid-template-columns: 82px minmax(0, 1fr);
+        gap: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+
+      .agent-key {
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .agent-footer {
+        display: grid;
+        gap: 8px;
+        margin-top: 18px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+
+      .agent-footer div {
+        display: grid;
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 10px;
+        align-items: baseline;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .agent-footer span {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .agent-row code,
+      .agent-footer code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+        color: var(--ink);
       }
 
       .io {
@@ -685,7 +738,8 @@
         }
         .agent-card, .tab-panel { padding: 20px; }
         .agent-scroll-box { padding: 16px 16px 42px; border-radius: 24px; }
-        .agent-card { flex-basis: min(420px, 84vw); min-height: 260px; }
+        .agent-card { flex-basis: min(420px, 84vw); min-height: 520px; }
+        .agent-row { grid-template-columns: 1fr; gap: 6px; }
         .bar-row { grid-template-columns: 112px 1fr 36px; }
       }
     </style>
@@ -727,41 +781,45 @@
           id: "discovery",
           name: "Discovery Agent",
           stage: "Stage 01",
-          role: "Builds the app's source packet by locating official docs, auth pages, pricing/access evidence, and MCP references.",
-          focus: "source trust + evidence coverage",
-          input: "app_name, category, website_hint",
-          output: "app_records.discovered.jsonl",
-          syntax: "DiscoveryAgent.run(app_record)\\n  focus: source trust + evidence coverage\\n  input: app_name, category, website_hint\\n  output: app_records.discovered.jsonl"
+          role: "Finds the official sources that should be trusted for each app.",
+          decides: "Which docs, auth pages, pricing/access pages, API references, and MCP mentions belong in the app's source packet.",
+          signals: "Developer docs, API references, OAuth docs, pricing pages, help center pages, MCP references.",
+          emits: "app_records.discovered.jsonl with source links, source types, and discovery coverage.",
+          input: "app_name · category · website_hint",
+          output: "app_records.discovered.jsonl"
         },
         {
           id: "extraction",
           name: "Extraction Agent",
           stage: "Stage 02",
-          role: "Turns source packets into structured research fields for auth, access, API surface, MCP status, and buildability.",
-          focus: "schema mapping + buildability judgment",
-          input: "discovered_record, source_packet",
-          output: "app_records.extracted.jsonl",
-          syntax: "ExtractionAgent.run(discovered_record, source_packet)\\n  focus: schema mapping + buildability judgment\\n  output: app_records.extracted.jsonl"
+          role: "Turns raw source packets into structured integration judgments.",
+          decides: "How each app should be labeled for auth method, access model, API breadth, MCP status, and buildability.",
+          signals: "Discovered source packet, auth docs, API docs, pricing/access evidence, app descriptions.",
+          emits: "app_records.extracted.jsonl with normalized research fields, blockers, evidence, and confidence.",
+          input: "discovered_record · source_packet",
+          output: "app_records.extracted.jsonl"
         },
         {
           id: "verification",
           name: "Verification Agent",
           stage: "Stage 03",
-          role: "Audits sampled rows against source evidence to check whether key claims are correct, partial, or unresolved.",
-          focus: "claim validation + QA flags",
-          input: "extracted_rows, evidence",
-          output: "app_records.verified.jsonl",
-          syntax: "VerificationAgent.audit(extracted_rows, evidence)\\n  focus: claim validation + QA flags\\n  output: app_records.verified.jsonl"
+          role: "Audits the first-pass dataset instead of trusting extraction blindly.",
+          decides: "Whether key claims in sampled rows are correct, partially supported, incorrect, or still unresolved.",
+          signals: "Extracted rows, evidence links, source snippets, low-confidence flags, blocker/buildability claims.",
+          emits: "verification_summary.json plus verified row updates and a QA queue for unresolved apps.",
+          input: "extracted_rows · evidence",
+          output: "app_records.verified.jsonl"
         },
         {
           id: "analysis",
           name: "Analysis Agent",
           stage: "Stage 04",
-          role: "Converts verified rows into buildability patterns, blocker trends, category summaries, and the final visible dataset.",
-          focus: "patterns + build / outreach queues",
-          input: "verified_records, verification_summary",
-          output: "analysis_summary.json",
-          syntax: "AnalysisAgent.summarize(verified_records, verification_summary)\\n  focus: patterns + build / outreach queues\\n  output: analysis_summary.json"
+          role: "Converts verified rows into the final decision-ready view for Product Ops.",
+          decides: "What patterns matter across the set: buildable-now share, access friction, blocker clusters, category-level readiness, and shortlist candidates.",
+          signals: "Verified records, blocker labels, access model counts, buildability verdicts, category breakdowns.",
+          emits: "Analysis summaries, shortlist outputs, and the final visible dataset used by the site.",
+          input: "verified_records · verification_summary",
+          output: "analysis_summary.json"
         }
       ];
 
@@ -811,9 +869,9 @@
             <div class="section-head">
               <div>
                 <div class="eyebrow">Agents used</div>
-                <h2>Specialized stages, concrete outputs.</h2>
+                <h2>How the system works.</h2>
               </div>
-              <p>The system is split into narrow agents so each step has one job, one input contract, and one artifact it emits.</p>
+              <p>Each stage has one narrow responsibility: gather trusted sources, convert them into structured integration judgments, audit weak claims, and turn the verified dataset into a decision-ready view for Composio.</p>
             </div>
             <div class="agent-scroll-box" aria-label="Horizontally scrollable agent cards">
               <div class="agent-track">
@@ -834,14 +892,22 @@
                 <h3>${agent.name}</h3>
               </div>
             </div>
-            <p>${agent.role}</p>
-            <div class="io">
-              <div><strong>focus:</strong> <code>${agent.focus}</code></div>
-              <div><strong>input:</strong> <code>${agent.input}</code></div>
-              <div><strong>output:</strong> <code>${agent.output}</code></div>
+            <p class="agent-role">${agent.role}</p>
+            <div class="agent-rows">
+              ${agentRow("Decides", agent.decides)}
+              ${agentRow("Signals", agent.signals)}
+              ${agentRow("Emits", agent.emits)}
+            </div>
+            <div class="agent-footer">
+              <div><span>Input</span><code>${agent.input}</code></div>
+              <div><span>Output</span><code>${agent.output}</code></div>
             </div>
           </article>
         `;
+      }
+
+      function agentRow(label, body) {
+        return `<div class="agent-row"><span class="agent-key">${label}</span><p>${body}</p></div>`;
       }
 
       function setupAgents() {
@@ -849,7 +915,15 @@
         if (!detail) return;
         const render = (agent) => {
           document.querySelectorAll(".agent-card").forEach((card) => card.classList.toggle("active", card.dataset.agent === agent.id));
-          detail.innerHTML = `<h3>${agent.name} contract</h3><p class="muted">${agent.role}</p><pre>${agent.syntax}</pre>`;
+          detail.innerHTML = `
+            <h3>${agent.name}</h3>
+            <p class="muted">${agent.role}</p>
+            <div class="agent-rows" style="margin-top:18px">
+              ${agentRow("Decides", agent.decides)}
+              ${agentRow("Signals", agent.signals)}
+              ${agentRow("Emits", agent.emits)}
+            </div>
+          `;
         };
         render(agents[0]);
         document.querySelectorAll(".agent-card").forEach((card) => {
@@ -938,8 +1012,27 @@
           </div>
         `,
         agents: () => `
+          <div style="margin-bottom:24px">
+            <h3>How the system works</h3>
+            <p class="muted">Each stage has one narrow responsibility: gather trusted sources, convert them into structured integration judgments, audit weak claims, and finally turn the verified dataset into a decision-ready view for Composio.</p>
+          </div>
           <div class="grid-2">
-            ${agents.map((agent) => `<div><h3>${agent.name}</h3><p class="muted">${agent.role}</p><pre class="code-block">${agent.syntax}</pre></div>`).join("")}
+            ${agents.map((agent) => `
+              <div class="dataset-card">
+                <div class="stage">${agent.stage}</div>
+                <h3>${agent.name}</h3>
+                <p class="agent-role">${agent.role}</p>
+                <div class="agent-rows">
+                  ${agentRow("Decides", agent.decides)}
+                  ${agentRow("Signals", agent.signals)}
+                  ${agentRow("Emits", agent.emits)}
+                </div>
+                <div class="agent-footer">
+                  <div><span>Input</span><code>${agent.input}</code></div>
+                  <div><span>Output</span><code>${agent.output}</code></div>
+                </div>
+              </div>
+            `).join("")}
           </div>
         `,
         links: () => `
