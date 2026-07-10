@@ -727,37 +727,41 @@
           id: "discovery",
           name: "Discovery Agent",
           stage: "Stage 01",
-          role: "Finds official developer docs, auth references, pricing/access pages, and MCP evidence.",
-          input: "app name, category, website hint",
+          role: "Builds the app's source packet by locating official docs, auth pages, pricing/access evidence, and MCP references.",
+          focus: "source trust + evidence coverage",
+          input: "app_name, category, website_hint",
           output: "app_records.discovered.jsonl",
-          syntax: "DiscoveryAgent.run(app_record)\\n  input: app_name, category, website_hint\\n  output: developer_docs, auth_docs, pricing_or_access, mcp_sources"
+          syntax: "DiscoveryAgent.run(app_record)\\n  focus: source trust + evidence coverage\\n  input: app_name, category, website_hint\\n  output: app_records.discovered.jsonl"
         },
         {
           id: "extraction",
           name: "Extraction Agent",
           stage: "Stage 02",
-          role: "Turns source packets into structured research fields: auth, access, API surface, buildability, and evidence.",
-          input: "discovered record + source packet",
+          role: "Turns source packets into structured research fields for auth, access, API surface, MCP status, and buildability.",
+          focus: "schema mapping + buildability judgment",
+          input: "discovered_record, source_packet",
           output: "app_records.extracted.jsonl",
-          syntax: "ExtractionAgent.run(discovered_record)\\n  fills: auth_methods, access_model, api_breadth, buildability\\n  rule: mark unclear instead of guessing"
+          syntax: "ExtractionAgent.run(discovered_record, source_packet)\\n  focus: schema mapping + buildability judgment\\n  output: app_records.extracted.jsonl"
         },
         {
           id: "verification",
           name: "Verification Agent",
           stage: "Stage 03",
-          role: "Samples rows, checks core claims, and flags unresolved fields instead of silently promoting them.",
-          input: "extracted rows + evidence",
-          output: "verification_summary.json",
-          syntax: "VerificationAgent.audit(sample)\\n  checks: auth, access, API, MCP, buildability\\n  labels: correct | partial | incorrect | needs_review"
+          role: "Audits sampled rows against source evidence to check whether key claims are correct, partial, or unresolved.",
+          focus: "claim validation + QA flags",
+          input: "extracted_rows, evidence",
+          output: "app_records.verified.jsonl",
+          syntax: "VerificationAgent.audit(extracted_rows, evidence)\\n  focus: claim validation + QA flags\\n  output: app_records.verified.jsonl"
         },
         {
           id: "analysis",
           name: "Analysis Agent",
           stage: "Stage 04",
-          role: "Computes distributions, category patterns, easy-win queues, outreach queues, and final table data.",
-          input: "verified rows",
+          role: "Converts verified rows into buildability patterns, blocker trends, category summaries, and the final visible dataset.",
+          focus: "patterns + build / outreach queues",
+          input: "verified_records, verification_summary",
           output: "analysis_summary.json",
-          syntax: "AnalysisAgent.summarize(verified_records)\\n  outputs: headline_findings, easy_wins, outreach_needed, category_breakdown"
+          syntax: "AnalysisAgent.summarize(verified_records, verification_summary)\\n  focus: patterns + build / outreach queues\\n  output: analysis_summary.json"
         }
       ];
 
@@ -833,6 +837,7 @@
             </div>
             <p>${agent.role}</p>
             <div class="io">
+              <div><strong>focus:</strong> <code>${agent.focus}</code></div>
               <div><strong>input:</strong> <code>${agent.input}</code></div>
               <div><strong>output:</strong> <code>${agent.output}</code></div>
             </div>
