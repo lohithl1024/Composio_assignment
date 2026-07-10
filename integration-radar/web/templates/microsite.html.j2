@@ -79,6 +79,24 @@
         color: var(--ink);
       }
 
+      .repo-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--ink);
+        transition: transform 160ms ease, border-color 160ms ease;
+      }
+
+      .repo-link:hover,
+      .repo-link:focus {
+        color: var(--ink);
+        border-color: var(--ink);
+        transform: translateY(-2px);
+      }
+
       .page {
         padding: 112px 0 84px;
       }
@@ -703,6 +721,11 @@
       .workflow-stage:first-child { border-top: 0; }
 
       .footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        align-items: center;
+        flex-wrap: wrap;
         padding: 54px 0;
         border-top: 1px solid var(--line);
         color: var(--muted);
@@ -753,12 +776,16 @@
           <a href="{{ base_path }}index.html#outputs">Outputs</a>
           <a href="{{ base_path }}index.html#dataset">Dataset</a>
           <a href="{{ base_path }}workflow/index.html">Workflow</a>
+          <a class="repo-link" href="https://github.com/lohithl1024/Composio_assignment" target="_blank" rel="noreferrer">GitHub Repo ↗</a>
         </nav>
       </div>
     </header>
 
     <main class="shell page" id="app"></main>
-    <footer class="shell footer">A repeatable research workflow for deciding which app integrations Composio can ship now, which need outreach, and which still require human review.</footer>
+    <footer class="shell footer">
+      <span>A repeatable research workflow for deciding which app integrations Composio can ship now, which need outreach, and which still require human review.</span>
+      <a class="repo-link" href="https://github.com/lohithl1024/Composio_assignment" target="_blank" rel="noreferrer">Open GitHub Repository ↗</a>
+    </footer>
 
     <script id="analysis-data" type="application/json">{{ analysis_json | safe }}</script>
     <script id="table-data" type="application/json">{{ table_json | safe }}</script>
