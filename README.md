@@ -16,8 +16,8 @@ This project does **not** just generate a spreadsheet. It treats the assignment 
 
 # Live deliverable
 
-- **Case study / site:** _add your Vercel link here_
-- **Repository:** _this repo_
+- **Case study / site:** https://composio-assignment-pi.vercel.app/
+- **Repository:** Composio_assignment
 
 ---
 
