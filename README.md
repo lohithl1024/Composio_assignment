@@ -43,8 +43,50 @@ The output is then aggregated to answer the more important product-ops questions
 - Where is the automation trustworthy, and where should human QA stay in the loop?
 
 ---
+## Implementation notes
 
+A few implementation choices shaped the project:
+
+- **Pydantic models** are used to keep row structure and enums consistent across stages.
+- **JSONL artifacts** are written at every stage so the workflow is restartable and debuggable.
+- **Rubric-driven labels** are used for fuzzy fields like access model, API breadth, and buildability so the pipeline does not invent categories ad hoc.
+- **Verification is sampled and conservative** rather than claiming full manual QA.
+- **The frontend is generated from processed outputs** (`analysis_summary.json`, `app_research_final.json`, `verification_summary.json`) rather than hand-written findings.
+
+
+
+## System architecture
+
+The pipeline is intentionally stage-based rather than one monolithic script.  
+Each stage has:
+
+- a **typed input contract**
+- a **single responsibility**
+- a **materialized artifact**
+- a **confidence / verification boundary**
+
+### Flow
+`apps.csv`
+→ `bootstrap_records.py`
+→ `discover_sources.py`
+→ `extract_record.py`
+→ `verify_record.py`
+→ `run_analysis.py`
+→ `build_visible_dataset.py`
+→ `build_case_study.py`
+
+### Why this structure
+I wanted each step to be inspectable and rerunnable in isolation:
+
+- **Bootstrap** normalizes the assignment list into canonical app records.
+- **Discovery** builds a source packet instead of making immediate claims.
+- **Extraction** maps source packets into structured labels.
+- **Verification** checks sampled claims and preserves unresolved rows.
+- **Analysis** converts verified rows into product-ops patterns and shortlists.
+- **Case-study build** is downstream of the data pipeline, not mixed into it.
 # Project structure
+
+
 
 ```bash
 integration-radar/
